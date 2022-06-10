@@ -4,7 +4,11 @@ import { RemovalPolicy } from "aws-cdk-lib";
 export const StorageStack = ({stack, app}) => {
 
     let bucket = new Bucket(stack, 'Uploads', {
-        removalPolicy: RemovalPolicy.DESTROY
+        cdk: {
+            bucket: {
+                removalPolicy: RemovalPolicy.DESTROY
+            }
+        }
     });
 
     let table = new Table(stack, 'NotesTable', {
