@@ -8,7 +8,13 @@ export const StorageStack = ({stack, app}) => {
             bucket: {
                 removalPolicy: RemovalPolicy.DESTROY
             }
-        }
+        },
+        cors: [{
+            maxAge: '1 day',
+            allowedOrigins: ['*'],
+            allowedHeaders: ['*'],
+            allowedMethods: ['GET', 'PUT', 'POST', 'DELETE', 'HEAD']
+        }]
     });
 
     let table = new Table(stack, 'NotesTable', {
