@@ -1,0 +1,1 @@
+[![Seed Status](https://api.seed.run/vaspoz/serverless-fullstack-aws/stages/prod/build_badge)](https://console.seed.run/vaspoz/serverless-fullstack-aws)
