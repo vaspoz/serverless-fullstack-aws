@@ -1,4 +1,7 @@
 before_build:
   - echo 'export CI=false' >> $BASH_ENV
   - cd frontend
+  - ls -a
+  - cat package.json
+  - rm -rf node_modules
   - npm install
